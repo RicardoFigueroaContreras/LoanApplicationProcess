@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.financial.department</groupId>
   <artifactId>LoanApplicationProcess</artifactId>
-  <version>2.0.0</version>
+  <version>1.0.0</version>
   <packaging>kjar</packaging>
   <name>LoanApplicationProcess</name>
   <description>Loan Application Process</description>
