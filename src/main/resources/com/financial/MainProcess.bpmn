@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_oOqSoJtxEeyHO5ltHAg-_A" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_tUargJtxEeyHO5ltHAg-_A" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
   <bpmn2:itemDefinition id="_resultProcessItem" structureRef="java.util.Map"/>
   <bpmn2:itemDefinition id="_scoreCardAgeMapItem" structureRef="java.util.Map"/>
   <bpmn2:itemDefinition id="_scoreCardMonthlyIncomeMapItem" structureRef="java.util.Map"/>
@@ -22,6 +22,7 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_20BFF5FE-4D03-4CDA-8D91-0C0E9D5D1CED</bpmn2:incoming>
       <bpmn2:outgoing>_4BA37D39-C101-4171-B931-4FE5DAB40930</bpmn2:outgoing>
+      <bpmn2:script><![CDATA[kcontext.setVariable("resultProcess", scoreCardMonthlyIncomeMap);]]></bpmn2:script>
     </bpmn2:scriptTask>
     <bpmn2:startEvent id="_DE1C801A-B6E2-42D2-B5BC-64AB38878112">
       <bpmn2:outgoing>_A31DC8DA-8D30-44D6-904F-1246AEC3E6C7</bpmn2:outgoing>
@@ -51,8 +52,8 @@ kcontext.setVariable("scoreCardMonthlyIncomeMap", scoreCardMonthlyIncome);]]></b
       <bpmn2:incoming>_4BA37D39-C101-4171-B931-4FE5DAB40930</bpmn2:incoming>
     </bpmn2:endEvent>
   </bpmn2:process>
-  <bpmndi:BPMNDiagram id="_oOqSoZtxEeyHO5ltHAg-_A">
-    <bpmndi:BPMNPlane id="_oOqSoptxEeyHO5ltHAg-_A" bpmnElement="LoanApplicationProcess.MainProcess">
+  <bpmndi:BPMNDiagram id="_tUargZtxEeyHO5ltHAg-_A">
+    <bpmndi:BPMNPlane id="_tUargptxEeyHO5ltHAg-_A" bpmnElement="LoanApplicationProcess.MainProcess">
       <bpmndi:BPMNShape id="shape__A5658DE0-390B-44DD-A547-E881D9020529" bpmnElement="_A5658DE0-390B-44DD-A547-E881D9020529">
         <dc:Bounds height="56.0" width="56.0" x="1080.0" y="233.0"/>
       </bpmndi:BPMNShape>
@@ -79,12 +80,12 @@ kcontext.setVariable("scoreCardMonthlyIncomeMap", scoreCardMonthlyIncome);]]></b
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
-  <bpmn2:relationship id="_oOqSo5txEeyHO5ltHAg-_A" type="BPSimData">
+  <bpmn2:relationship id="_tUarg5txEeyHO5ltHAg-_A" type="BPSimData">
     <bpmn2:extensionElements>
       <bpsim:BPSimData>
         <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
           <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5C6B4773-1957-4E6B-8922-F271C71A956F" id="_oOqSpJtxEeyHO5ltHAg-_A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_5C6B4773-1957-4E6B-8922-F271C71A956F" id="_tUarhJtxEeyHO5ltHAg-_A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -104,14 +105,14 @@ kcontext.setVariable("scoreCardMonthlyIncomeMap", scoreCardMonthlyIncome);]]></b
               </bpsim:UnitCost>
             </bpsim:CostParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DE1C801A-B6E2-42D2-B5BC-64AB38878112" id="_oOqSpZtxEeyHO5ltHAg-_A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_DE1C801A-B6E2-42D2-B5BC-64AB38878112" id="_tUarhZtxEeyHO5ltHAg-_A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
               </bpsim:ProcessingTime>
             </bpsim:TimeParameters>
           </bpsim:ElementParameters>
-          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_90CCAE5E-FE46-4767-BB89-06992FAC032E" id="_oOqSpptxEeyHO5ltHAg-_A">
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_90CCAE5E-FE46-4767-BB89-06992FAC032E" id="_tUarhptxEeyHO5ltHAg-_A">
             <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
               <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
                 <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
@@ -134,7 +135,7 @@ kcontext.setVariable("scoreCardMonthlyIncomeMap", scoreCardMonthlyIncome);]]></b
         </bpsim:Scenario>
       </bpsim:BPSimData>
     </bpmn2:extensionElements>
-    <bpmn2:source>_oOqSoJtxEeyHO5ltHAg-_A</bpmn2:source>
-    <bpmn2:target>_oOqSoJtxEeyHO5ltHAg-_A</bpmn2:target>
+    <bpmn2:source>_tUargJtxEeyHO5ltHAg-_A</bpmn2:source>
+    <bpmn2:target>_tUargJtxEeyHO5ltHAg-_A</bpmn2:target>
   </bpmn2:relationship>
 </bpmn2:definitions>
